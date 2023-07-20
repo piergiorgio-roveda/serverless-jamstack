@@ -14,7 +14,7 @@ async function main() {
         const inventory = await client.db("do-maps").collection("available-maps").find().toArray();
         console.log(inventory);
         return {
-            "body_x": inventory
+            "body": inventory
         };
     } catch (e) {
         console.error(e);
